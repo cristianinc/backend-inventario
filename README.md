@@ -1,0 +1,6 @@
+#Backend Inventario
+
+
+```
+npm install
+```
