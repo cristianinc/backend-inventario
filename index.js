@@ -20,7 +20,7 @@ dbConection();
 //rutas
 
 app.use('/api/users', require('./routes/user'));
-
+app.use('/api/login', require('./routes/auth'));
 
 
 app.listen( process.env.PORT, () => {
