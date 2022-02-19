@@ -10,16 +10,17 @@ const app = express();
 //configuracion de cors
 app.use( cors() );
 
+
+//Lectura y parseo del body
+app.use( express.json() );
+
 //Database
 dbConection();
 
 //rutas
-app.get( '/health', (req, res) => {
-    res.status(200).json({
-        ok:true,
-        msg: 'Hola Mundo'
-    })
-});
+
+app.use('/api/users', require('./routes/user'));
+
 
 
 app.listen( process.env.PORT, () => {
