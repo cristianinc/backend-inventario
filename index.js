@@ -21,6 +21,7 @@ dbConection();
 
 app.use('/api/users', require('./routes/user'));
 app.use('/api/login', require('./routes/auth'));
+app.use('/api/users-group', require('./routes/users-group'));
 
 
 app.listen( process.env.PORT, () => {
